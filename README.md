@@ -29,6 +29,15 @@ From your preparation, we learned downhillScores, which is represented as a list
   - c is the integer score that you would get for using this downhill segment to go from point a to point b
   - We cannot assume that the list of tuples are in any specific order.
 
-Now, the tournament organisers have decided the starting point start and finishing point finish of the tournament. We have that start, finish ∈ {0, 1, . . . , |P| − 1}. We implemented a function **optimalRoute(downhillScores, start, finish)** that outputs the route that you should use for going from the starting point start to the finishing point finish while using only downhill segments and obtaining the maximum score:
+Now, the tournament organisers have decided the starting point start and finishing point finish of the tournament. We have that start, finish ∈ {0, 1, . . . , |P| − 1}. 
+We implemented a function **optimalRoute(downhillScores, start, finish)** that outputs the route that you should use for going from the starting point start to the finishing point finish while using only downhill segments and obtaining the maximum score:
  - If no such route going from the starting point start to finishing point finish while using only downhill segments exists, then the function would return None.
  - Otherwise, it would return the optimal route as a list of integers. If there are multiple optimal routes, return any of them.
+
+Input and Output:
+For example:
+ - downhillScores = [(0, 6, -500), (1, 4, 100), (1, 2, 300), (6, 3, -100), (6, 1, 200), (3, 4, 400), (3, 1, 400), (5, 6, 700), (5, 1, 1000), (4, 2, 100)]
+ - start = 6
+ - finish = 2
+ - optimalRoute(downhillScores, start, finish)
+ - Output: [6, 3, 1, 2]
